@@ -12,6 +12,8 @@ const Form = (props) => {
         event.preventDefault()
         if(name){
             props.addTask(name)
+        } else {
+            alert('Please enter a Todo')
         }
         setName('')
     }

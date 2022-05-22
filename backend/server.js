@@ -29,28 +29,10 @@ const corsOptions = {
 
 app.use(cors(corsOptions))
 
-const DATA = [
-  {
-    id: "todo-0",
-    name: "Eat",
-    complete: true,
-  },
-  {
-    id: "todo-1",
-    name: "Sleep",
-    complete: false,
-  },
-  {
-    id: "todo-2",
-    name: "Repeat",
-    complete: false,
-  },
-]
-
 app.use('/api/tasks', taskRoutes)
 
 app.get('/', (req, res) => {
-    res.send(DATA)
+    res.send('API is running...')
 })
 
 app.listen(

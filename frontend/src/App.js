@@ -9,15 +9,14 @@ const App = (props) => {
   const [ data, setData ] = useState([])
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/tasks")
-      .then((res) => {
-        setData([...res.data])
-      })
-      .catch(function (error) {
-        console.log(error)
-      })
-  }, [data])
+    axios.get('http://localhost:5000/api/tasks')
+    .then(res => {
+      setData([...res.data])
+    })
+    .catch(function (error) {
+      console.log(error)
+    })
+  }, [])
 
   const tasksList = data.map((task) => (
     <Todo
